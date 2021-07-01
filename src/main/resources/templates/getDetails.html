@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+    <style>
+        .myDiv {
+          border: 5px outset red;
+          background-color: lightblue;
+          text-align: center;
+          display: none;
+        }
+    </style>
+
+<form id="getForm">
+  <div class="container">
+    <h1>Get Details</h1>
+    <p>Please tell us your email ID.</p>
+    <div class="myDiv" id="alert">
+        NO Details found.. Have u ever registered before??
+        <p>Register <a href="/register">here</a></p>
+    </div>
+
+    <hr>
+    <label for="emailId"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="emailID" id="emailId" required>
+    <hr>
+
+    <button type="submit" class="registerbtn">Get Details!</button>
+    
+    <table class="table table-hover" id="mainTable">
+        <thead>
+            <tr>
+                <th></th>
+                <th></th>
+                <th></th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+  </div>  
+</form>
+<div>
+   <p> <a href="/">HOME PAGE</a></p>
+</div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="gd.js"></script>
+</body>
+</html>
