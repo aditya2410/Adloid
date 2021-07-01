@@ -20,7 +20,7 @@ public class RedisConfig {
     private int port ;
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
-        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration("172.18.0.2", 6379);
+        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration(hostname, port);
         return new JedisConnectionFactory(redisStandaloneConfiguration);
     }
 
