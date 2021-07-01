@@ -10,16 +10,20 @@ import org.springframework.data.redis.listener.RedisMessageListenerContainer;
 import org.springframework.data.redis.listener.adapter.MessageListenerAdapter;
 import org.springframework.data.redis.serializer.GenericToStringSerializer;
 import org.springframework.data.redis.connection.RedisStandaloneConfiguration;
+import org.springframework.beans.factory.annotation.Value;
 import com.adloid.webApp.queue.*;
 
 @Configuration
 @ComponentScan("com.adloid.webApp")
 public class RedisConfig {
 
-
+    @Value("${redis.hostname}")
+    private String hostname;
+    @Value("${redis.port}")
+    private int port ;
     @Bean
     JedisConnectionFactory jedisConnectionFactory() {
-        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration("172.18.0.2",6379);
+        RedisStandaloneConfiguration redisStandaloneConfiguration = new RedisStandaloneConfiguration(hostname, port);
         return new JedisConnectionFactory(redisStandaloneConfiguration);
     }
 
