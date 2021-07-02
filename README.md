@@ -38,5 +38,5 @@ CMD: docker run --net spring-redis-network -p 8080:8080 aditya2410/adloidapp <p>
 
 Note: make sure there is no other redis-server running on the host machine else HostName for redis server (running in redis-1) may change <p>
 
-
-App URL: http://localhost:8080/
+After following the above process, you can launch the website on your system by using below URL.
+URL: http://localhost:8080/
